@@ -7,7 +7,7 @@
     <PackageReference Include="Solnet.Rpc" Version="6.1.0" />
     <PackageReference Include="Solnet.Wallet" Version="6.1.0" />
     <PackageReference Include="Solnet.Programs" Version="6.1.0" />
-    <PackageReference Include="ThrowGuard" Version="1.0.6" />
+    <PackageReference Include="ThrowGuard" Version="1.0.7" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Solnet.Pyth\Solnet.Pyth.csproj" />
