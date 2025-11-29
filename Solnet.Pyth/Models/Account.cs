@@ -1,54 +1,53 @@
-namespace Solnet.Pyth.Models
+namespace Solnet.Pyth.Models;
+
+/// <summary>
+/// Represents a base account in Pyth.
+/// </summary>
+public abstract class Account
 {
     /// <summary>
-    /// Represents a base account in Pyth.
+    /// Represents the data layout of the <see cref="Account"/>.
     /// </summary>
-    public abstract class Account
+    internal static class Layout
     {
         /// <summary>
-        /// Represents the data layout of the <see cref="Account"/>.
+        /// The offset at which the MagicNumber value starts.
         /// </summary>
-        internal static class Layout
-        {
-            /// <summary>
-            /// The offset at which the MagicNumber value starts.
-            /// </summary>
-            internal const int MagicNumberOffset = 0;
-        
-            /// <summary>
-            /// The offset at which the Version value starts.
-            /// </summary>
-            internal const int VersionOffset = 4;
-
-            /// <summary>
-            /// The offset at which the Type value starts.
-            /// </summary>
-            internal const int TypeOffset = 8;
-
-            /// <summary>
-            /// The offset at which the Size value starts.
-            /// </summary>
-            internal const int SizeOffset = 12;
-        }
+        internal const int MagicNumberOffset = 0;
         
         /// <summary>
-        /// Magic.
+        /// The offset at which the Version value starts.
         /// </summary>
-        public uint MagicNumber;
+        internal const int VersionOffset = 4;
 
         /// <summary>
-        /// The current version.
+        /// The offset at which the Type value starts.
         /// </summary>
-        public uint Version;
+        internal const int TypeOffset = 8;
 
         /// <summary>
-        /// The type of the mapping account.
+        /// The offset at which the Size value starts.
         /// </summary>
-        public AccountType Type;
-
-        /// <summary>
-        /// The size of the account data.
-        /// </summary>
-        public uint Size;
+        internal const int SizeOffset = 12;
     }
+        
+    /// <summary>
+    /// Magic.
+    /// </summary>
+    public uint MagicNumber;
+
+    /// <summary>
+    /// The current version.
+    /// </summary>
+    public uint Version;
+
+    /// <summary>
+    /// The type of the mapping account.
+    /// </summary>
+    public AccountType Type;
+
+    /// <summary>
+    /// The size of the account data.
+    /// </summary>
+    public uint Size;
 }

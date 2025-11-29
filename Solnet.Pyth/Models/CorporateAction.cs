@@ -1,13 +1,12 @@
-namespace Solnet.Pyth.Models
+namespace Solnet.Pyth.Models;
+
+/// <summary>
+/// Represents the corporate action for a product.
+/// </summary>
+public enum CorporateAction
 {
     /// <summary>
-    /// Represents the corporate action for a product.
+    /// No action.
     /// </summary>
-    public enum CorporateAction
-    {
-        /// <summary>
-        /// No action.
-        /// </summary>
-        NoCorporateAction
-    }
+    NoCorporateAction
 }
